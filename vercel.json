@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "outputDirectory": "public",
   "builds": [
     {
       "src": "public/index.php",
@@ -7,6 +8,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "/build/(.*)",
+      "dest": "/public/build/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/public/index.php"
